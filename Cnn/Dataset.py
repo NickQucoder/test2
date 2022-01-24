@@ -31,6 +31,7 @@ with open(test_img_path, 'rb') as f:
     struct.unpack('>4i', f.read(16))
     test_img = np.fromfile(f, dtype=np.uint8).reshape(-1, 28*28)
 
+    
 with open(train_label_path, 'rb') as f:
     struct.unpack('>2i', f.read(8))
     tep_label = np.fromfile(f, dtype=np.uint8)
